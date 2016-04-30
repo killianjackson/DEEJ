@@ -8,24 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		B2225DB11CD462D900989BA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2225DB01CD462D900989BA9 /* AppDelegate.swift */; };
-		B2225DB31CD462D900989BA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2225DB21CD462D900989BA9 /* ViewController.swift */; };
+		B2225DB31CD462D900989BA9 /* StreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2225DB21CD462D900989BA9 /* StreamsViewController.swift */; };
 		B2225DB61CD462D900989BA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2225DB41CD462D900989BA9 /* Main.storyboard */; };
 		B2225DB91CD462D900989BA9 /* DEEJ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2225DB71CD462D900989BA9 /* DEEJ.xcdatamodeld */; };
 		B2225DBB1CD462D900989BA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2225DBA1CD462D900989BA9 /* Assets.xcassets */; };
 		B2225DBE1CD462D900989BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2225DBC1CD462D900989BA9 /* LaunchScreen.storyboard */; };
 		B2225DC71CD4643E00989BA9 /* ios-sdk-deploy-beta-16 in Resources */ = {isa = PBXBuildFile; fileRef = B2225DC61CD4643E00989BA9 /* ios-sdk-deploy-beta-16 */; };
+		B2225DC91CD4673200989BA9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2225DC81CD4673200989BA9 /* AVFoundation.framework */; };
+		B2225DCB1CD4673B00989BA9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2225DCA1CD4673B00989BA9 /* SystemConfiguration.framework */; };
+		B2225DD41CD486A200989BA9 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2225DD01CD486A200989BA9 /* NotoSans-Bold.ttf */; };
+		B2225DD51CD486A200989BA9 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2225DD11CD486A200989BA9 /* NotoSans-BoldItalic.ttf */; };
+		B2225DD61CD486A200989BA9 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2225DD21CD486A200989BA9 /* NotoSans-Italic.ttf */; };
+		B2225DD71CD486A200989BA9 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2225DD31CD486A200989BA9 /* NotoSans-Regular.ttf */; };
+		B2225DD91CD48E7800989BA9 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2225DD81CD48E7800989BA9 /* Stream.swift */; };
+		B2225DDB1CD494E900989BA9 /* StreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2225DDA1CD494E900989BA9 /* StreamCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B2225DAD1CD462D900989BA9 /* DEEJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEEJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2225DB01CD462D900989BA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2225DB21CD462D900989BA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2225DB21CD462D900989BA9 /* StreamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamsViewController.swift; sourceTree = "<group>"; };
 		B2225DB51CD462D900989BA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2225DB81CD462D900989BA9 /* DEEJ.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DEEJ.xcdatamodel; sourceTree = "<group>"; };
 		B2225DBA1CD462D900989BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2225DBD1CD462D900989BA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2225DBF1CD462D900989BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2225DC61CD4643E00989BA9 /* ios-sdk-deploy-beta-16 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "ios-sdk-deploy-beta-16"; sourceTree = "<group>"; };
+		B2225DC81CD4673200989BA9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B2225DCA1CD4673B00989BA9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B2225DD01CD486A200989BA9 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		B2225DD11CD486A200989BA9 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		B2225DD21CD486A200989BA9 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		B2225DD31CD486A200989BA9 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		B2225DD81CD48E7800989BA9 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		B2225DDA1CD494E900989BA9 /* StreamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2225DCB1CD4673B00989BA9 /* SystemConfiguration.framework in Frameworks */,
+				B2225DC91CD4673200989BA9 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,8 @@
 		B2225DA41CD462D900989BA9 = {
 			isa = PBXGroup;
 			children = (
+				B2225DCA1CD4673B00989BA9 /* SystemConfiguration.framework */,
+				B2225DC81CD4673200989BA9 /* AVFoundation.framework */,
 				B2225DAF1CD462D900989BA9 /* DEEJ */,
 				B2225DAE1CD462D900989BA9 /* Products */,
 			);
@@ -58,8 +78,12 @@
 		B2225DAF1CD462D900989BA9 /* DEEJ */ = {
 			isa = PBXGroup;
 			children = (
+				B2225DCE1CD4865000989BA9 /* View */,
+				B2225DCD1CD4864700989BA9 /* Model */,
+				B2225DCF1CD4865400989BA9 /* Controller */,
+				B2225DCC1CD4863300989BA9 /* Resources */,
 				B2225DB01CD462D900989BA9 /* AppDelegate.swift */,
-				B2225DB21CD462D900989BA9 /* ViewController.swift */,
+				B2225DB21CD462D900989BA9 /* StreamsViewController.swift */,
 				B2225DB41CD462D900989BA9 /* Main.storyboard */,
 				B2225DBA1CD462D900989BA9 /* Assets.xcassets */,
 				B2225DBC1CD462D900989BA9 /* LaunchScreen.storyboard */,
@@ -76,6 +100,40 @@
 				B2225DC61CD4643E00989BA9 /* ios-sdk-deploy-beta-16 */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2225DCC1CD4863300989BA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B2225DD01CD486A200989BA9 /* NotoSans-Bold.ttf */,
+				B2225DD11CD486A200989BA9 /* NotoSans-BoldItalic.ttf */,
+				B2225DD21CD486A200989BA9 /* NotoSans-Italic.ttf */,
+				B2225DD31CD486A200989BA9 /* NotoSans-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B2225DCD1CD4864700989BA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2225DD81CD48E7800989BA9 /* Stream.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B2225DCE1CD4865000989BA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2225DDA1CD494E900989BA9 /* StreamCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B2225DCF1CD4865400989BA9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +194,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2225DD51CD486A200989BA9 /* NotoSans-BoldItalic.ttf in Resources */,
 				B2225DBE1CD462D900989BA9 /* LaunchScreen.storyboard in Resources */,
 				B2225DBB1CD462D900989BA9 /* Assets.xcassets in Resources */,
 				B2225DB61CD462D900989BA9 /* Main.storyboard in Resources */,
+				B2225DD71CD486A200989BA9 /* NotoSans-Regular.ttf in Resources */,
+				B2225DD61CD486A200989BA9 /* NotoSans-Italic.ttf in Resources */,
+				B2225DD41CD486A200989BA9 /* NotoSans-Bold.ttf in Resources */,
 				B2225DC71CD4643E00989BA9 /* ios-sdk-deploy-beta-16 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,9 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2225DB31CD462D900989BA9 /* ViewController.swift in Sources */,
+				B2225DB31CD462D900989BA9 /* StreamsViewController.swift in Sources */,
 				B2225DB91CD462D900989BA9 /* DEEJ.xcdatamodeld in Sources */,
 				B2225DB11CD462D900989BA9 /* AppDelegate.swift in Sources */,
+				B2225DD91CD48E7800989BA9 /* Stream.swift in Sources */,
+				B2225DDB1CD494E900989BA9 /* StreamCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +366,7 @@
 				B2225DC41CD462D900989BA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
