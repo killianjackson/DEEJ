@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F18b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fX5-6X-Onm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F28b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GqJ-Ty-5ds">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,8 +8,11 @@
     <customFonts key="customFonts">
         <mutableArray key="NotoSans-Bold.ttf">
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
         </mutableArray>
@@ -76,13 +79,13 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xF5-NV-byR">
                                                             <rect key="frame" x="68" y="0.0" width="500" height="60"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="killianjackson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEc-IN-Dlx">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="killianjackson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="vEc-IN-Dlx">
                                                                     <rect key="frame" x="0.0" y="0.0" width="500" height="30"/>
                                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                     <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now playing: Back to back by Drake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-Sv-4Vx">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now playing: Back to back by Drake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-Sv-4Vx">
                                                                     <rect key="frame" x="0.0" y="30" width="500" height="30"/>
                                                                     <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                                     <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -150,8 +153,118 @@
             </objects>
             <point key="canvasLocation" x="1619" y="152"/>
         </scene>
+        <!--Player View Controller-->
+        <scene sceneID="gQm-Pf-Iou">
+            <objects>
+                <viewController id="GqJ-Ty-5ds" customClass="PlayerViewController" customModule="DEEJ" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NKz-BL-Dx2"/>
+                        <viewControllerLayoutGuide type="bottom" id="r6d-Dc-mqI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f64-qo-PSg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAlbumArt" translatesAutoresizingMaskIntoConstraints="NO" id="dDV-WX-eGI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="djv-ir-eFi">
+                                <rect key="frame" x="20" y="502" width="560" height="2"/>
+                                <color key="progressTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="O6D-Ee-YcY">
+                                <rect key="frame" x="40" y="520" width="520" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsK-Dn-c1Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="qn4-Vv-9L1"/>
+                                            <constraint firstAttribute="height" constant="60" id="z7w-NB-fyZ"/>
+                                        </constraints>
+                                        <state key="normal" image="heartFilled"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7Y-9g-Xbl">
+                                        <rect key="frame" x="230" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="YYv-Sy-ZlV"/>
+                                            <constraint firstAttribute="height" constant="60" id="neG-PR-jfd"/>
+                                        </constraints>
+                                        <state key="normal" image="playButton"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJs-Fn-O9R">
+                                        <rect key="frame" x="460" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Czn-vD-4EO"/>
+                                            <constraint firstAttribute="width" constant="60" id="gNY-nU-x14"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="19"/>
+                                        <state key="normal" title="Hide">
+                                            <color key="titleColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUp-Xe-UE7">
+                                <rect key="frame" x="20" y="30" width="570" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fgt-3b-iiG">
+                                        <rect key="frame" x="0.0" y="0.0" width="510" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The Great Gig in the Sky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLY-At-L0z">
+                                                <rect key="frame" x="0.0" y="0.0" width="510" height="37"/>
+                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                                <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pink Floyd – The Dark Side of the Moon " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-Sn-Enx">
+                                                <rect key="frame" x="0.0" y="37" width="510" height="24"/>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePicKillian" translatesAutoresizingMaskIntoConstraints="NO" id="iS7-nA-e1j">
+                                        <rect key="frame" x="510" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="1Td-dK-77u"/>
+                                            <constraint firstAttribute="width" constant="60" id="T9k-Yv-uQh"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BUp-Xe-UE7" secondAttribute="trailing" constant="10" id="3PU-UF-Xuc"/>
+                            <constraint firstItem="djv-ir-eFi" firstAttribute="leading" secondItem="f64-qo-PSg" secondAttribute="leading" constant="20" id="9LD-58-OvW"/>
+                            <constraint firstItem="BUp-Xe-UE7" firstAttribute="leading" secondItem="f64-qo-PSg" secondAttribute="leading" constant="20" id="DTV-id-wPd"/>
+                            <constraint firstAttribute="trailing" secondItem="djv-ir-eFi" secondAttribute="trailing" constant="20" id="Hxk-5L-Awz"/>
+                            <constraint firstItem="O6D-Ee-YcY" firstAttribute="centerX" secondItem="f64-qo-PSg" secondAttribute="centerX" id="M6b-Ud-kHR"/>
+                            <constraint firstItem="BUp-Xe-UE7" firstAttribute="top" secondItem="NKz-BL-Dx2" secondAttribute="bottom" constant="10" id="O9Y-lk-bVp"/>
+                            <constraint firstItem="O6D-Ee-YcY" firstAttribute="top" secondItem="djv-ir-eFi" secondAttribute="bottom" constant="16" id="P7n-uY-4g6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dDV-WX-eGI" secondAttribute="trailing" constant="-20" id="W8r-Dn-S5r"/>
+                            <constraint firstItem="dDV-WX-eGI" firstAttribute="leading" secondItem="f64-qo-PSg" secondAttribute="leadingMargin" constant="-20" id="adP-8U-Twp"/>
+                            <constraint firstItem="dDV-WX-eGI" firstAttribute="top" secondItem="f64-qo-PSg" secondAttribute="topMargin" id="mnR-M7-7XC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O6D-Ee-YcY" secondAttribute="trailing" constant="20" id="nDo-3C-ZsT"/>
+                            <constraint firstItem="r6d-Dc-mqI" firstAttribute="top" secondItem="dDV-WX-eGI" secondAttribute="bottom" id="rKw-9Q-prb"/>
+                            <constraint firstItem="O6D-Ee-YcY" firstAttribute="leading" secondItem="f64-qo-PSg" secondAttribute="leadingMargin" constant="20" id="vmz-34-6YP"/>
+                            <constraint firstItem="r6d-Dc-mqI" firstAttribute="top" secondItem="O6D-Ee-YcY" secondAttribute="bottom" constant="20" id="z6f-Q3-ujo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="streamerProfilePic" destination="iS7-nA-e1j" id="sGf-Rx-zaI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TH6-jh-lmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2432" y="49"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="defaultAlbumArt" width="1680" height="1050"/>
+        <image name="heartFilled" width="150" height="147"/>
+        <image name="playButton" width="50" height="50"/>
         <image name="profilePicKillian" width="2448" height="3264"/>
     </resources>
 </document>

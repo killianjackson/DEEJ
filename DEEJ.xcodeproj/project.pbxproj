@@ -22,6 +22,7 @@
 		B2225DD71CD486A200989BA9 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2225DD31CD486A200989BA9 /* NotoSans-Regular.ttf */; };
 		B2225DD91CD48E7800989BA9 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2225DD81CD48E7800989BA9 /* Stream.swift */; };
 		B2225DDB1CD494E900989BA9 /* StreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2225DDA1CD494E900989BA9 /* StreamCell.swift */; };
+		B27A72011CD52B8B00DB0C10 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A72001CD52B8B00DB0C10 /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B2225DD31CD486A200989BA9 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		B2225DD81CD48E7800989BA9 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		B2225DDA1CD494E900989BA9 /* StreamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCell.swift; sourceTree = "<group>"; };
+		B27A72001CD52B8B00DB0C10 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,6 @@
 				B2225DCF1CD4865400989BA9 /* Controller */,
 				B2225DCC1CD4863300989BA9 /* Resources */,
 				B2225DB01CD462D900989BA9 /* AppDelegate.swift */,
-				B2225DB21CD462D900989BA9 /* StreamsViewController.swift */,
 				B2225DB41CD462D900989BA9 /* Main.storyboard */,
 				B2225DBA1CD462D900989BA9 /* Assets.xcassets */,
 				B2225DBC1CD462D900989BA9 /* LaunchScreen.storyboard */,
@@ -132,6 +133,8 @@
 		B2225DCF1CD4865400989BA9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B2225DB21CD462D900989BA9 /* StreamsViewController.swift */,
+				B27A72001CD52B8B00DB0C10 /* PlayerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				TargetAttributes = {
 					B2225DAC1CD462D900989BA9 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4N8AC86529;
 					};
 				};
 			};
@@ -217,6 +221,7 @@
 				B2225DB11CD462D900989BA9 /* AppDelegate.swift in Sources */,
 				B2225DD91CD48E7800989BA9 /* Stream.swift in Sources */,
 				B2225DDB1CD494E900989BA9 /* StreamCell.swift in Sources */,
+				B27A72011CD52B8B00DB0C10 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,10 +334,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DEEJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PKJ.DEEJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -340,10 +348,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DEEJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PKJ.DEEJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
