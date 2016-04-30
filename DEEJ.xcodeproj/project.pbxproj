@@ -13,6 +13,7 @@
 		B2225DB91CD462D900989BA9 /* DEEJ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2225DB71CD462D900989BA9 /* DEEJ.xcdatamodeld */; };
 		B2225DBB1CD462D900989BA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2225DBA1CD462D900989BA9 /* Assets.xcassets */; };
 		B2225DBE1CD462D900989BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2225DBC1CD462D900989BA9 /* LaunchScreen.storyboard */; };
+		B2225DC71CD4643E00989BA9 /* ios-sdk-deploy-beta-16 in Resources */ = {isa = PBXBuildFile; fileRef = B2225DC61CD4643E00989BA9 /* ios-sdk-deploy-beta-16 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B2225DBA1CD462D900989BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2225DBD1CD462D900989BA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2225DBF1CD462D900989BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2225DC61CD4643E00989BA9 /* ios-sdk-deploy-beta-16 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "ios-sdk-deploy-beta-16"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,17 @@
 				B2225DBC1CD462D900989BA9 /* LaunchScreen.storyboard */,
 				B2225DBF1CD462D900989BA9 /* Info.plist */,
 				B2225DB71CD462D900989BA9 /* DEEJ.xcdatamodeld */,
+				B2225DC51CD4642C00989BA9 /* Frameworks */,
 			);
 			path = DEEJ;
+			sourceTree = "<group>";
+		};
+		B2225DC51CD4642C00989BA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2225DC61CD4643E00989BA9 /* ios-sdk-deploy-beta-16 */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +139,7 @@
 				B2225DBE1CD462D900989BA9 /* LaunchScreen.storyboard in Resources */,
 				B2225DBB1CD462D900989BA9 /* Assets.xcassets in Resources */,
 				B2225DB61CD462D900989BA9 /* Main.storyboard in Resources */,
+				B2225DC71CD4643E00989BA9 /* ios-sdk-deploy-beta-16 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
