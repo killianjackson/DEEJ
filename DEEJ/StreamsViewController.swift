@@ -58,7 +58,9 @@ class StreamsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    
+        let stream = streams[indexPath.row]
+        performSegueWithIdentifier("MusicPlayerSegue", sender: stream)
+        self.streamTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -67,6 +69,12 @@ class StreamsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
     
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "MusicPlayerSegue" {
+            let playerViewController = segue.destinationViewController as! PlayerViewController
+        }
     }
 
 }
