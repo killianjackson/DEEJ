@@ -48,7 +48,7 @@
                                         <rect key="frame" x="20" y="241" width="560" height="89"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YOM-l6-Ohi">
-                                                <rect key="frame" x="215.5" y="14.5" width="129" height="60"/>
+                                                <rect key="frame" x="216" y="15" width="129" height="60"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotifyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="V79-Ru-XQH">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>

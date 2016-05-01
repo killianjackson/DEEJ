@@ -5,7 +5,7 @@
 	<key>LSApplicationQueriesScheme</key>
 	<array>
 		<string>spotify</string>
-		<string>spotify-action</string>
+		<string>spotify-action:</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
