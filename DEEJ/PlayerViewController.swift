@@ -55,5 +55,12 @@ class PlayerViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func playDatShit(sender: AnyObject) {
+        
+        print("pressed playDatShit")
+        player?.playURI(NSURL(string: "spotify:track:58s6EuEYJdlb0kO7awm3Vp"), callback: { (error: NSError!) in
+            print("Here you dirty whore")
+        })
+    }
 
 }
