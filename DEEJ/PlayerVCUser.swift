@@ -1,16 +1,16 @@
 //
-//  PlayerViewController.swift
+//  PlayerVCUser.swift
 //  DEEJ
 //
-//  Created by Killian Jackson on 4/30/16.
+//  Created by Killian Jackson on 5/1/16.
 //  Copyright © 2016 Killian Jackson. All rights reserved.
 //
 
 import UIKit
 import Alamofire
 
-class PlayerViewController: UIViewController {
-
+class PlayerVCUser: UIViewController {
+    
     @IBOutlet weak var streamerProfilePic: UIImageView!
     var player:SPTAudioStreamingController?
     var user:SPTUser?
@@ -39,7 +39,7 @@ class PlayerViewController: UIViewController {
             print(self.username)
         }
     }
-
+    
     
     func playUsingSession(sessionObj: SPTSession!){
         if player == nil {
@@ -68,76 +68,55 @@ class PlayerViewController: UIViewController {
     }
     
     @IBAction func playDatShit(sender: AnyObject) {
-        self.player?.playURI(NSURL(string: "spotify:track:58s6EuEYJdlb0kO7awm3Vp"), callback: { (error: NSError!) in
+            /*self.player?.playURI(NSURL(string: "spotify:track:58s6EuEYJdlb0kO7awm3Vp"), callback: { (error: NSError!) in
             self.trackMetaData = (self.player?.currentTrackMetadata)!
             self.titles = self.trackMetaData!["SPTAudioStreamingMetadataTrackName"] as! String!
             self.album = self.trackMetaData!["SPTAudioStreamingMetadataAlbumName"] as! String!
             self.artist = self.trackMetaData!["SPTAudioStreamingMetadataArtistName"] as! String!
             self.status = "active"
             self.nsurl = "spotify:track:58s6EuEYJdlb0kO7awm3Vp"
-            print(self.trackMetaData)
-            /*
-            Alamofire.request(.GET, "\(SERVER_URL)/users") .validate(contentType: ["application/json"]).responseJSON { response in
-                let result = response.result
-                print(result)
-                //let temp = result.value
-                
-                if let dictArray = response.result.value as? [[String: AnyObject]], let dict = dictArray.first {
+            print(self.trackMetaData)*/
+            
+             Alamofire.request(.GET, "\(SERVER_URL)/songs/killianjackson") .validate(contentType: ["application/json"]).responseJSON { response in
+                    let result = response.result
+                    print(result)
+             
+                    if let dictArray = response.result.value as? [[String: AnyObject]], let dict = dictArray.first {
                     print(dict)
-                    if let client = dict["clientID"] as? String {
-                        //print()
+                    self.nsurl = dict["nsurl"] as! String!
+                        self.player?.playURI(NSURL(string: self.nsurl), callback: { (error: NSError!) in })
                     }
                 }
-            }*/
-            
-            Alamofire.request(.PUT, "\(SERVER_URL)/songs", parameters: ["clientID": self.username, "title": self.titles, "artist": self.artist, "album": self.album, "nsurl": self.nsurl])
-                .response { (request, response, data, error) in
-                    print(request)
-                    print(response)
-                    print(error)
-            }
-            
-            Alamofire.request(.PUT, "\(SERVER_URL)/users", parameters: ["clientID": self.username, "status": self.status])
-                .response { (request, response, data, error) in
-                    print(request)
-                    print(response)
-                    print(error)
-            }
-
-            
-            
-            
-        })
     }
     
     /*func fetchAllRooms(completion: ([RemoteRoom]?) -> Void) {
-        Alamofire.request(
-        .GET,
-        "http://localhost:5984/rooms/_all_docs",
-        parameters: ["include_docs": "true"],
-        encoding: .URL)
-        .validate()
-        .responseJSON { (response) -> Void in
-        guard response.result.isSuccess else {
-        print("Error while fetching remote rooms: \(response.result.error)")
-        completion(nil)
-        return
-        }
-        
-        guard let value = response.result.value as? [String: AnyObject],
-        rows = value["rows"] as? [[String: AnyObject]] else {
-        print("Malformed data received from fetchAllRooms service")
-        completion(nil)
-        return
-        }
-        
-        var rooms = [RemoteRoom]()
-        for roomDict in rows {
-        rooms.append(RemoteRoom(jsonData: roomDict))
-        }
-        
-        completion(rooms)
-        }
-    }*/
-
+     Alamofire.request(
+     .GET,
+     "http://localhost:5984/rooms/_all_docs",
+     parameters: ["include_docs": "true"],
+     encoding: .URL)
+     .validate()
+     .responseJSON { (response) -> Void in
+     guard response.result.isSuccess else {
+     print("Error while fetching remote rooms: \(response.result.error)")
+     completion(nil)
+     return
+     }
+     
+     guard let value = response.result.value as? [String: AnyObject],
+     rows = value["rows"] as? [[String: AnyObject]] else {
+     print("Malformed data received from fetchAllRooms service")
+     completion(nil)
+     return
+     }
+     
+     var rooms = [RemoteRoom]()
+     for roomDict in rows {
+     rooms.append(RemoteRoom(jsonData: roomDict))
+     }
+     
+     completion(rooms)
+     }
+     }*/
+    
 }
