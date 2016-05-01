@@ -55,7 +55,7 @@ class PlayerViewController: UIViewController {
             }
             
             //SPTTrack.trackWithURI("spotify:track:58s6EuEYJdlb0kO7awm3Vp", session: sessionObj, callback: {(error: NSError!, album: AnyObject!) -> Void})
-            SPTTrack.trackWithURI(NSURL(string: "spotify:track:58s6EuEYJdlb0kO7awm3Vp"), session: sessionObj, callback: { (error: NSError!, track: AnyObject!) in
+            SPTTrack.trackWithURI(NSURL(string: "spotify:track:5lFDtgWsjRJu8fPOAyJIAK"), session: sessionObj, callback: { (error: NSError!, track: AnyObject!) in
                 print(track)
             })
         })
@@ -77,7 +77,7 @@ class PlayerViewController: UIViewController {
             self.album = self.trackMetaData!["SPTAudioStreamingMetadataAlbumName"] as! String!
             self.artist = self.trackMetaData!["SPTAudioStreamingMetadataArtistName"] as! String!
             self.status = "active"
-            self.nsurl = "spotify:track:58s6EuEYJdlb0kO7awm3Vp"
+            self.nsurl = "spotify:track:5lFDtgWsjRJu8fPOAyJIAK"
             self.titleLbl.text = self.titles
             self.artistAlbumLbl.text = "\(self.artist) – \(self.album)"
             print(self.trackMetaData)

@@ -55,7 +55,7 @@ class PlayerVCUser: UIViewController {
             }
             
             //SPTTrack.trackWithURI("spotify:track:58s6EuEYJdlb0kO7awm3Vp", session: sessionObj, callback: {(error: NSError!, album: AnyObject!) -> Void})
-            SPTTrack.trackWithURI(NSURL(string: "spotify:track:58s6EuEYJdlb0kO7awm3Vp"), session: sessionObj, callback: { (error: NSError!, track: AnyObject!) in
+            SPTTrack.trackWithURI(NSURL(string: "spotify:track:5lFDtgWsjRJu8fPOAyJIAK"), session: sessionObj, callback: { (error: NSError!, track: AnyObject!) in
                 print(track)
             })
         })
@@ -79,6 +79,7 @@ class PlayerVCUser: UIViewController {
             self.status = "active"
             self.nsurl = "spotify:track:58s6EuEYJdlb0kO7awm3Vp"
             print(self.trackMetaData)*/
+        print("Test")
             
              Alamofire.request(.GET, "\(SERVER_URL)/songs/killianjackson") .validate(contentType: ["application/json"]).responseJSON { response in
                     let result = response.result
@@ -88,14 +89,14 @@ class PlayerVCUser: UIViewController {
                     print(dict)
                     self.nsurl = dict["nsurl"] as! String!
                         self.player?.playURI(NSURL(string: self.nsurl), callback: { (error: NSError!) in })
-                        self.trackMetaData = (self.player?.currentTrackMetadata)!
+                        /*self.trackMetaData = (self.player?.currentTrackMetadata)!
                         self.titles = self.trackMetaData!["SPTAudioStreamingMetadataTrackName"] as! String!
                         self.album = self.trackMetaData!["SPTAudioStreamingMetadataAlbumName"] as! String!
                         self.artist = self.trackMetaData!["SPTAudioStreamingMetadataArtistName"] as! String!
                         self.status = "active"
-                        self.nsurl = "spotify:track:58s6EuEYJdlb0kO7awm3Vp"
+                        //self.nsurl = "spotify:track:5lFDtgWsjRJu8fPOAyJIAK"
                         self.titleLbl.text = self.titles
-                        self.artistAlbumLbl.text = "\(self.artist) – \(self.album)"
+                        self.artistAlbumLbl.text = "\(self.artist) – \(self.album)"*/
                     }
                 }
     }
