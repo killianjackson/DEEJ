@@ -12,6 +12,9 @@ import Alamofire
 class PlayerViewController: UIViewController {
 
     @IBOutlet weak var streamerProfilePic: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var artistAlbumLbl: UILabel!
+    @IBOutlet weak var albumArt: UIImageView!
     var player:SPTAudioStreamingController?
     var user:SPTUser?
     var trackMetaData: NSDictionary?
@@ -68,13 +71,15 @@ class PlayerViewController: UIViewController {
     }
     
     @IBAction func playDatShit(sender: AnyObject) {
-        self.player?.playURI(NSURL(string: "spotify:track:58s6EuEYJdlb0kO7awm3Vp"), callback: { (error: NSError!) in
+        self.player?.playURI(NSURL(string: "spotify:track:5lFDtgWsjRJu8fPOAyJIAK"), callback: { (error: NSError!) in
             self.trackMetaData = (self.player?.currentTrackMetadata)!
             self.titles = self.trackMetaData!["SPTAudioStreamingMetadataTrackName"] as! String!
             self.album = self.trackMetaData!["SPTAudioStreamingMetadataAlbumName"] as! String!
             self.artist = self.trackMetaData!["SPTAudioStreamingMetadataArtistName"] as! String!
             self.status = "active"
             self.nsurl = "spotify:track:58s6EuEYJdlb0kO7awm3Vp"
+            self.titleLbl.text = self.titles
+            self.artistAlbumLbl.text = "\(self.artist) – \(self.album)"
             print(self.trackMetaData)
             /*
             Alamofire.request(.GET, "\(SERVER_URL)/users") .validate(contentType: ["application/json"]).responseJSON { response in

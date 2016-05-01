@@ -12,6 +12,9 @@ import Alamofire
 class PlayerVCUser: UIViewController {
     
     @IBOutlet weak var streamerProfilePic: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var artistAlbumLbl: UILabel!
+    @IBOutlet weak var albumArt: UIImageView!
     var player:SPTAudioStreamingController?
     var user:SPTUser?
     var trackMetaData: NSDictionary?
@@ -85,6 +88,14 @@ class PlayerVCUser: UIViewController {
                     print(dict)
                     self.nsurl = dict["nsurl"] as! String!
                         self.player?.playURI(NSURL(string: self.nsurl), callback: { (error: NSError!) in })
+                        self.trackMetaData = (self.player?.currentTrackMetadata)!
+                        self.titles = self.trackMetaData!["SPTAudioStreamingMetadataTrackName"] as! String!
+                        self.album = self.trackMetaData!["SPTAudioStreamingMetadataAlbumName"] as! String!
+                        self.artist = self.trackMetaData!["SPTAudioStreamingMetadataArtistName"] as! String!
+                        self.status = "active"
+                        self.nsurl = "spotify:track:58s6EuEYJdlb0kO7awm3Vp"
+                        self.titleLbl.text = self.titles
+                        self.artistAlbumLbl.text = "\(self.artist) – \(self.album)"
                     }
                 }
     }

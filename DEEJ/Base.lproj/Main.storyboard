@@ -411,7 +411,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAlbumArt" translatesAutoresizingMaskIntoConstraints="NO" id="dDV-WX-eGI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backToBack" translatesAutoresizingMaskIntoConstraints="NO" id="dDV-WX-eGI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="djv-ir-eFi">
@@ -462,14 +462,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fgt-3b-iiG">
                                         <rect key="frame" x="0.0" y="0.0" width="510" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The Great Gig in the Sky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLY-At-L0z">
-                                                <rect key="frame" x="0.0" y="0.0" width="510" height="37"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLY-At-L0z">
+                                                <rect key="frame" x="0.0" y="0.0" width="510" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pink Floyd – The Dark Side of the Moon " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-Sn-Enx">
-                                                <rect key="frame" x="0.0" y="37" width="510" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-Sn-Enx">
+                                                <rect key="frame" x="0.0" y="0.0" width="510" height="60"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -506,7 +506,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="EIN-qq-HD2"/>
                     <connections>
+                        <outlet property="albumArt" destination="dDV-WX-eGI" id="h2t-rd-tYX"/>
+                        <outlet property="artistAlbumLbl" destination="Dh3-Sn-Enx" id="yiF-u7-fb4"/>
                         <outlet property="streamerProfilePic" destination="iS7-nA-e1j" id="sGf-Rx-zaI"/>
+                        <outlet property="titleLbl" destination="YLY-At-L0z" id="GNJ-LL-Uio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TH6-jh-lmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -525,7 +528,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAlbumArt" translatesAutoresizingMaskIntoConstraints="NO" id="lyw-GD-ZgA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backToBack" translatesAutoresizingMaskIntoConstraints="NO" id="lyw-GD-ZgA">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6kw-68-Y4i">
@@ -576,14 +579,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="97Z-5l-4Wb">
                                         <rect key="frame" x="0.0" y="0.0" width="510" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The Great Gig in the Sky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zK-hT-6Hm">
-                                                <rect key="frame" x="0.0" y="0.0" width="510" height="37"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zK-hT-6Hm">
+                                                <rect key="frame" x="0.0" y="0.0" width="510" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pink Floyd – The Dark Side of the Moon " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCA-st-jhG">
-                                                <rect key="frame" x="0.0" y="37" width="510" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCA-st-jhG">
+                                                <rect key="frame" x="0.0" y="0.0" width="510" height="60"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -620,7 +623,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="B6g-99-nO6"/>
                     <connections>
+                        <outlet property="albumArt" destination="lyw-GD-ZgA" id="OHE-hG-Eqy"/>
+                        <outlet property="artistAlbumLbl" destination="uCA-st-jhG" id="elR-4u-qNL"/>
                         <outlet property="streamerProfilePic" destination="Ny7-AO-Vm2" id="vwn-rG-IK3"/>
+                        <outlet property="titleLbl" destination="5zK-hT-6Hm" id="fh1-bU-0dF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOJ-f9-sjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -631,7 +637,7 @@
     <resources>
         <image name="DJ" width="1024" height="1024"/>
         <image name="audioWave" width="50" height="50"/>
-        <image name="defaultAlbumArt" width="1680" height="1050"/>
+        <image name="backToBack" width="485" height="485"/>
         <image name="heartFilled" width="150" height="147"/>
         <image name="playButton" width="50" height="50"/>
         <image name="profilePicKillian" width="2448" height="3264"/>
