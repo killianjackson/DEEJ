@@ -14,6 +14,8 @@ class StreamsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var searchBar: UISearchBar!
     
     var streams = [Stream]()
+    var filteredStreams = [Stream]()
+    var inSearchMode = false
     
     
     override func viewDidLoad() {
@@ -43,13 +45,22 @@ class StreamsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return streams.count
+        if (inSearchMode) {
+            return filteredStreams.count
+        } else {
+            return streams.count
+        }
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("StreamCell") as? StreamCell {
             let stream : Stream!
-            stream = streams[indexPath.row]
+            if(inSearchMode) {
+                stream = filteredStreams[indexPath.row]
+            } else {
+                stream = streams[indexPath.row]
+            }
             cell.configureCell(stream)
             return cell
         } else {
@@ -68,7 +79,16 @@ class StreamsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-    
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            view.endEditing(true)
+            streamTableView.reloadData()
+        } else {
+            inSearchMode = true
+            let lower = searchBar.text!.lowercaseString
+            filteredStreams = streams.filter({$0.username.lowercaseString.rangeOfString(lower) != nil})
+        }
+        streamTableView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

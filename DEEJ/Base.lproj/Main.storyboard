@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F28b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fX5-6X-Onm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F28b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Y0g-ai-Aho">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -15,9 +15,253 @@
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--LoginVC-->
+        <scene sceneID="8B7-bK-teV">
+            <objects>
+                <viewController id="Y0g-ai-Aho" customClass="LoginVC" customModule="DEEJ" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ig-yG-YPK"/>
+                        <viewControllerLayoutGuide type="bottom" id="LGU-82-FFT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="upi-Cg-2fg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaG-Uv-gnx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEEJ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUO-T4-X4w">
+                                        <rect key="frame" x="268.5" y="50" width="64.5" height="41"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="30"/>
+                                        <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnr-Wy-5BG" customClass="MaterialView" customModule="DEEJ" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="241" width="560" height="89"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YOM-l6-Ohi">
+                                                <rect key="frame" x="215.5" y="14.5" width="129" height="60"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotifyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="V79-Ru-XQH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="PXm-Lo-l92"/>
+                                                            <constraint firstAttribute="height" constant="60" id="dFr-eq-Tv8"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVk-3Q-pb3">
+                                                        <rect key="frame" x="75" y="0.0" width="54" height="60"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.11764705882352941" green="0.84313725490196079" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="89" id="Dbv-jt-e43"/>
+                                            <constraint firstItem="YOM-l6-Ohi" firstAttribute="centerX" secondItem="lnr-Wy-5BG" secondAttribute="centerX" id="f0G-sw-mHA"/>
+                                            <constraint firstAttribute="width" constant="560" id="hFq-1G-X3F"/>
+                                            <constraint firstItem="YOM-l6-Ohi" firstAttribute="centerY" secondItem="lnr-Wy-5BG" secondAttribute="centerY" id="hyO-dd-Zow"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="M6Z-7s-Wof" appends="YES" id="dzE-os-AXm"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lnr-Wy-5BG" firstAttribute="top" secondItem="LUO-T4-X4w" secondAttribute="bottom" constant="150" id="3BS-Cx-fcB"/>
+                                    <constraint firstItem="lnr-Wy-5BG" firstAttribute="centerX" secondItem="VaG-Uv-gnx" secondAttribute="centerX" id="8jB-lL-hNi"/>
+                                    <constraint firstItem="lnr-Wy-5BG" firstAttribute="centerY" secondItem="VaG-Uv-gnx" secondAttribute="centerY" id="AwF-ck-GbY"/>
+                                    <constraint firstAttribute="trailing" secondItem="lnr-Wy-5BG" secondAttribute="trailing" constant="20" id="IqN-Uw-Dhj"/>
+                                    <constraint firstAttribute="bottom" secondItem="lnr-Wy-5BG" secondAttribute="bottom" constant="270" id="VYY-fO-XTc"/>
+                                    <constraint firstItem="LUO-T4-X4w" firstAttribute="centerX" secondItem="VaG-Uv-gnx" secondAttribute="centerX" id="W9C-wl-h5w"/>
+                                    <constraint firstItem="lnr-Wy-5BG" firstAttribute="leading" secondItem="VaG-Uv-gnx" secondAttribute="leading" constant="20" id="lty-8k-QhL"/>
+                                    <constraint firstItem="LUO-T4-X4w" firstAttribute="top" secondItem="VaG-Uv-gnx" secondAttribute="top" constant="50" id="tfD-fU-eEl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8jB-lL-hNi"/>
+                                        <exclude reference="AwF-ck-GbY"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VaG-Uv-gnx" firstAttribute="leading" secondItem="upi-Cg-2fg" secondAttribute="leadingMargin" constant="-20" id="7yY-Zm-XR8"/>
+                            <constraint firstItem="LGU-82-FFT" firstAttribute="top" secondItem="VaG-Uv-gnx" secondAttribute="bottom" id="E12-Hd-aMH"/>
+                            <constraint firstItem="VaG-Uv-gnx" firstAttribute="top" secondItem="upi-Cg-2fg" secondAttribute="topMargin" id="iun-je-1IK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VaG-Uv-gnx" secondAttribute="trailing" constant="-20" id="tvL-PF-9bh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="spotifyLogin" destination="lnr-Wy-5BG" id="iAG-8h-I1E"/>
+                        <segue destination="Ocy-uV-gpC" kind="show" identifier="LoggedIn" id="h4k-XD-PCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Txm-iZ-vmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="M6Z-7s-Wof">
+                    <connections>
+                        <action selector="signInTapped:" destination="Y0g-ai-Aho" id="S2u-Y0-s6K"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="90" y="121"/>
+        </scene>
+        <!--Jor BrowseVC-->
+        <scene sceneID="T4i-di-yg4">
+            <objects>
+                <viewController id="Ocy-uV-gpC" customClass="DJorBrowseVC" customModule="DEEJ" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DJf-8O-68b"/>
+                        <viewControllerLayoutGuide type="bottom" id="2SA-Ev-FSL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FGm-rw-l5y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMg-j3-dpx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEEJ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S6-e4-DLK">
+                                        <rect key="frame" x="241" y="19" width="119" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="119" id="41y-V3-QwB"/>
+                                            <constraint firstAttribute="height" constant="37" id="dC3-FW-Qez"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2S6-e4-DLK" firstAttribute="top" secondItem="lMg-j3-dpx" secondAttribute="top" constant="19" id="NRX-1A-GwK"/>
+                                    <constraint firstItem="2S6-e4-DLK" firstAttribute="centerX" secondItem="lMg-j3-dpx" secondAttribute="centerX" id="Yxl-js-6FX"/>
+                                    <constraint firstAttribute="bottom" secondItem="2S6-e4-DLK" secondAttribute="bottom" constant="12" id="uVz-pr-P04"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aJj-Lt-Tlt">
+                                <rect key="frame" x="20" y="201" width="560" height="198"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-mM-Ori" customClass="MaterialView" customModule="DEEJ" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="89"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aFw-cH-Kme">
+                                                <rect key="frame" x="176" y="15" width="93" height="60"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="DJ" translatesAutoresizingMaskIntoConstraints="NO" id="Xpc-Ic-qoM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="K8L-hL-u07"/>
+                                                            <constraint firstAttribute="height" constant="60" id="oZB-Cw-GE7"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DJ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0A-ye-cux">
+                                                        <rect key="frame" x="75" y="19" width="18" height="24"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.1176470588" green="0.84313725490000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="aFw-cH-Kme" firstAttribute="centerX" secondItem="gEt-mM-Ori" secondAttribute="centerX" id="0Yl-9h-0bI"/>
+                                            <constraint firstAttribute="height" constant="89" id="DhI-on-dgU"/>
+                                            <constraint firstItem="aFw-cH-Kme" firstAttribute="centerY" secondItem="gEt-mM-Ori" secondAttribute="centerY" id="Ny4-ov-DUb"/>
+                                            <constraint firstAttribute="width" constant="560" id="ZwR-OM-JBz"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="PFM-V7-Cl0" appends="YES" id="k7q-T7-dCv"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6v6-2v-66n" customClass="MaterialView" customModule="DEEJ" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="109" width="560" height="89"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KYi-Ff-ejB">
+                                                <rect key="frame" x="182" y="15" width="135" height="60"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="audioWave" translatesAutoresizingMaskIntoConstraints="NO" id="rsb-hh-x9V">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="Nxh-uJ-Y6o"/>
+                                                            <constraint firstAttribute="width" constant="60" id="cmg-vN-Dy3"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Browse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPp-Ge-Ou4">
+                                                        <rect key="frame" x="75" y="19" width="60" height="24"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.1176470588" green="0.84313725490000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="KYi-Ff-ejB" firstAttribute="centerY" secondItem="6v6-2v-66n" secondAttribute="centerY" id="9Am-Ce-iG6"/>
+                                            <constraint firstAttribute="height" constant="89" id="DwR-sL-XSe"/>
+                                            <constraint firstAttribute="width" constant="560" id="Je4-Fz-blb"/>
+                                            <constraint firstItem="KYi-Ff-ejB" firstAttribute="centerX" secondItem="6v6-2v-66n" secondAttribute="centerX" id="OhJ-m0-Glm"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="M2k-8F-vM8" appends="YES" id="8Y8-lZ-29g"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lMg-j3-dpx" firstAttribute="top" secondItem="FGm-rw-l5y" secondAttribute="topMargin" id="2Nh-IU-rB1"/>
+                            <constraint firstItem="aJj-Lt-Tlt" firstAttribute="centerY" secondItem="FGm-rw-l5y" secondAttribute="centerY" id="6KB-Pc-hPP"/>
+                            <constraint firstItem="aJj-Lt-Tlt" firstAttribute="leading" secondItem="FGm-rw-l5y" secondAttribute="leading" constant="20" id="P1k-qS-9yW"/>
+                            <constraint firstItem="aJj-Lt-Tlt" firstAttribute="centerX" secondItem="FGm-rw-l5y" secondAttribute="centerX" id="XSD-jL-ZAV"/>
+                            <constraint firstAttribute="trailing" secondItem="aJj-Lt-Tlt" secondAttribute="trailing" constant="20" id="gXS-1i-jQz"/>
+                            <constraint firstItem="lMg-j3-dpx" firstAttribute="leading" secondItem="FGm-rw-l5y" secondAttribute="leadingMargin" constant="-20" id="mgD-xF-7Ub"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lMg-j3-dpx" secondAttribute="trailing" constant="-20" id="oAV-ay-QdY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="XSD-jL-ZAV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="fX5-6X-Onm" kind="show" identifier="BrowseSelected" id="UbR-Jc-2D3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKm-ZR-dvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PFM-V7-Cl0" userLabel="DJ Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="DJTapped:" destination="Ocy-uV-gpC" id="9DG-n0-Fe4"/>
+                        <segue destination="GqJ-Ty-5ds" kind="show" identifier="DJSelected" id="AIa-vH-FOP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="M2k-8F-vM8" userLabel="Browse Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="BrowseTapped:" destination="Ocy-uV-gpC" id="52m-pf-OHM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="841" y="121"/>
+        </scene>
         <!--Streams View Controller-->
         <scene sceneID="eZV-Xr-Cle">
             <objects>
@@ -152,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJX-Hg-63T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1619" y="152"/>
+            <point key="canvasLocation" x="1639" y="688"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="gQm-Pf-Iou">
@@ -262,13 +506,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TH6-jh-lmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2386" y="152"/>
+            <point key="canvasLocation" x="2122" y="39"/>
         </scene>
     </scenes>
     <resources>
+        <image name="DJ" width="1024" height="1024"/>
+        <image name="audioWave" width="50" height="50"/>
         <image name="defaultAlbumArt" width="1680" height="1050"/>
         <image name="heartFilled" width="150" height="147"/>
         <image name="playButton" width="50" height="50"/>
         <image name="profilePicKillian" width="2448" height="3264"/>
+        <image name="spotifyLogo" width="236" height="236"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AIa-vH-FOP"/>
+    </inferredMetricsTieBreakers>
 </document>

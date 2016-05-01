@@ -16,7 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        print("openURL: \(url)")
+        SPTAuth.defaultInstance().handleAuthCallbackWithTriggeredAuthURL(url, callback: { (error:NSError!, session:SPTSession!) -> Void in
+            if error != nil {
+                print("error:\(error)")
+                return
+            }
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            let sessionData = NSKeyedArchiver.archivedDataWithRootObject(session)
+            userDefaults.setObject(sessionData, forKey: "SpotifySession")
+            userDefaults.synchronize()
+            NSNotificationCenter.defaultCenter().postNotificationName("LoginSuccess", object: nil)
+            print("logged in")
+        })
         return true
     }
 
